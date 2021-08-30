@@ -1,5 +1,5 @@
 from app import api
-from app.core.views import HelloWorld
+from app.core.views import FeedbackPostAPIView
 
-api.add_resource(HelloWorld, "/api/v1/hello")
+api.add_resource(FeedbackPostAPIView, "/api/v1/post-feedback")
 
