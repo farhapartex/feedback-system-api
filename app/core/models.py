@@ -16,3 +16,4 @@ class Feedback(BaseEntity):
 
     id = db.Column(db.Integer, primary_key=True)
     topic = db.Column(db.String())
+    description = db.Column(db.String())
