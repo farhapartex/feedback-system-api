@@ -1,4 +1,11 @@
+from typing import List
+
 from pydantic import BaseModel
+
+
+class ErrorDTO(BaseModel):
+    details: str
+    code: int
 
 
 class PostFeedbackDTO(BaseModel):
@@ -23,3 +30,12 @@ class QuerySuccessDTO(BaseModel):
 class QueryFailureDTO(BaseModel):
     error: str
 
+
+class FeedbackDTO(BaseModel):
+    id: int
+    topic: str
+    description: str
+
+
+class FeedbackListDTO(BaseModel):
+    feedbacks: List[FeedbackDTO]
