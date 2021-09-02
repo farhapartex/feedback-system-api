@@ -1,6 +1,7 @@
 from app import app
 from config import *
 from app.urls import *
+from app.core import *
 
 
 def main():
