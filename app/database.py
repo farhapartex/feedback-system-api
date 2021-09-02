@@ -4,7 +4,7 @@ from sqlalchemy.future import Engine
 from sqlalchemy.exc import ProgrammingError
 from sqlalchemy.sql import text
 from app import DATABASE_URI
-
+from app.core.exceptions import QueryExecutionFailException
 
 logger = logging.getLogger(__name__)
 
@@ -24,5 +24,5 @@ class Database:
             engine: Engine = cls._get_engine()
             return engine.execute(query)
         except ProgrammingError as error:
-            logger.error("sqlalchemy query execution error: %s", str(error))
-            return []
+            logger.error(str(error))
+            raise QueryExecutionFailException(details="System execution failed, try after some time.")
