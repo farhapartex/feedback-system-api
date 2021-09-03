@@ -1,5 +1,5 @@
 from app import db
-from app import BaseEntity
+from app.models import BaseEntity
 
 
 class Feedback(BaseEntity):
