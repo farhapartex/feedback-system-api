@@ -2,6 +2,7 @@ from app import app
 from config import *
 from app.urls import *
 from app.core import *
+from app.auth import *
 
 
 def main():
