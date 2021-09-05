@@ -1,5 +1,7 @@
 ## Feedback System API
 
+#### ** Project is not completed yet
+
 ### Database Setup
 * create a file named settings.json and copy data from settings_format.json file
 * Set Database name, user, password, port etc
